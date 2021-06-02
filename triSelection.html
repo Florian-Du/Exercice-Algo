@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        var tab= [46,31,80,56,20,1,2,100,60];
+
+        for (let i = 0; i < tab.length; i++) {
+            for (let j = i+1; j < tab.length; j++) {
+                if (tab[i] < tab[j]) {
+                    var select = tab[i];
+                    tab[i] = tab[j];
+                    tab[j] = select;
+                }
+            }
+        }
+
+        console.log(tab)
+    </script>
+</html>

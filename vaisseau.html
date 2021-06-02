@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaisseau</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        var distance = 225000000;
+        var temps = 2;
+        var vaisseauA = 1;
+        var vaisseauB = 1.6;
+        var fb = 0;
+        var fb1 = 1;
+        var fb2;
+        while ((vaisseauA+vaisseauB)<distance) {
+            fb2 = fb1+fb;
+            vaisseauA=vaisseauA+fb2;
+            fb=fb1;
+            fb1=fb2;
+
+            vaisseauB=vaisseauB*1.6;
+
+            temps++;
+        }
+        console.log(temps);
+    </script>
+</html>

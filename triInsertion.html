@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        var tab= [46,31,80,56,20,1,2,100,60];
+
+        for (let i = 1; i < tab.length; i++) {
+            var select = tab[i];
+            var cpt = i-1;
+            while (select < tab[cpt] && cpt>=0) {
+                tab[cpt+1] = tab[cpt]
+                cpt--;
+            }
+            tab[cpt+1] = select
+        }
+        console.log(tab);
+    </script>
+</html>

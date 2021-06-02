@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre premier</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        
+        console.log(estPremier());
+        function estPremier() {
+            var lenombre = Math.floor(Math.sqrt(9576890767))
+            var premier = true;
+            for (let i = 2; i < lenombre; i++) {
+                    if (lenombre % i == 0) {
+                        premier = false;
+                        return "le nombre n'est pas premier";
+                    }
+            }
+            if (premier === true) {
+                return "le  nombre est premier";
+            }
+        }
+    </script>
+</html>

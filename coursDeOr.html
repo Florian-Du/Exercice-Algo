@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur Romain</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        var jours = ["lundi", "mardi","mercredi","jeudi","vendredi","samedi","dimanche"]
+        var coursDeOr = [1,-410,20,2,80,3,564];
+        var MeilleurVente;
+        var MeilleurAchat;
+        var Achat = coursDeOr[0];
+        var Benefice = 0;
+
+        for (let i = 0; i < coursDeOr.length; i++) {
+            Achat = coursDeOr[i];
+            for (let j = 0; i+j < coursDeOr.length; j++) {
+                if (Benefice < coursDeOr[i+j]-Achat) {
+                    Benefice = coursDeOr[i+j]-Achat;
+                    MeilleurVente = i+j;
+                    MeilleurAchat = i;
+                }
+            }
+        }
+
+        console.log('Le meilleur achat a faire est le '+jours[MeilleurAchat]+', et la meilleur Vente a faire est le '+jours[MeilleurVente]+' pour un benefice de '+Benefice)
+    </script>
+</html>
