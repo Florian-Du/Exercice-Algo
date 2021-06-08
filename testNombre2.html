@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirage de des</title>
+</head>
+<body>
+    <script>
+        var nombre1 = Math.round(Math.random() * (6 - 1) + 1);
+        var nombre2 = Math.round(Math.random() * (6 - 1) + 1);
+        var nombre3 = Math.round(Math.random() * (6 - 1) + 1);
+        
+        var nombreVerif = 21;
+        var nombreAVerif = nombre1*nombre1 + nombre2*nombre2 + nombre3*nombre3;
+        if (nombreAVerif === nombreVerif) {
+            console.log("gagner")
+        }
+        console.log(nombre1)
+        console.log(nombre2)
+        console.log(nombre3)
+        console.log(nombreAVerif)
+        
+        
+    </script>
+</body>
+</html>

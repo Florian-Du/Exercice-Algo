@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tirage au hasard</title>
 </head>
-<body>
+<body onload="choissirNombre()">
     <script>
-        var nombreMin = prompt("choisissez nombre minimum");
-        var nombreMax = prompt("choisissez nombre maximum");
-        var nombre = Math.round(Math.random() * (nombreMax - nombreMin1) + nombreMin);
-        console.log(nombre)
+        function choissirNombre() {
+            var nombreMin = prompt("choisissez nombre minimum");
+            var nombreMax = prompt("choisissez nombre maximum");
+            if (nombreMin >= nombreMax) {
+                alert("votre nombre minmum est plus grand ou egal a votre nombre max")
+                choissirNombre();
+            }
+            var nombre = Math.round(Math.random() * (nombreMax - nombreMin) + nombreMin);
+            console.log(nombre)
+        }
+        
     </script>
 </body>
 </html>

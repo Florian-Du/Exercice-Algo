@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirage de des</title>
+</head>
+<body>
+    <script>
+        var tab = [];
+        var tabRecherche = [4,2,1];
+        var cpt = 0;
+
+        for (let i = 0; i < 3; i++) {  
+            var nombre = Math.round(Math.random() * (6 - 1) + 1);
+            tab.push(nombre);
+        }
+
+        for (let j = 0; j < tab.length; j++) {
+            for (let k = 0; k < tabRecherche.length; k++) {
+                if (tab[j] === tabRecherche[k]) {
+                    tabRecherche[k] = '';
+                    cpt++;
+                }
+            }
+        }
+        console.log(tab);
+        console.log(tabRecherche);
+        console.log(cpt);
+        if (cpt === 3) {
+            console.log('gagner');
+        }
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
